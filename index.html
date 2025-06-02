@@ -24,7 +24,7 @@
   </head>
 
   <body
-    class="overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300"
+    class="overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-neutral-100 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-neutral-300"
   >
     <!-- Invoice -->
     <div
@@ -49,15 +49,15 @@
 
             <div class="text-end">
               <h2
-                class="print:text-lg text-2xl font-semibold text-gray-800"
+                class="print:text-lg text-2xl font-semibold text-neutral-800"
                 x-text="billing.matricule"
               ></h2>
               <dd
-                class="print:text-xs col-span-2 text-gray-500"
+                class="print:text-xs col-span-2 text-neutral-500"
                 x-text="billing.date"
               ></dd>
               <address
-                class="print:text-xs not-italic text-gray-800"
+                class="print:text-xs not-italic text-neutral-800"
                 x-text="billing.location"
               ></address>
             </div>
@@ -66,20 +66,20 @@
           <!-- End Grid -->
 
           <!-- Grid -->
-          <div class="print:mt-4 mt-8 grid sm:grid-cols-2 gap-3">
+          <div class="print:mt-4 mt-8 grid sm:grid-cols-2 md:grid-cols-4 gap-3">
             <div>
               <div class="flex gap-x-2 items-start">
                 <span
-                  class="flex shrink-0 justify-center items-center size-7 bg-white border border-gray-200 text-[10px] font-light text-lg uppercase text-gray-600 rounded-lg"
+                  class="flex shrink-0 justify-center items-center size-7 bg-white border border-neutral-200 text-[10px] font-light text-lg uppercase text-neutral-600 rounded-lg"
                 >
                   <i class="ri-service-line"></i>
                 </span>
                 <div>
-                  <h3 class="print:text-xs font-semibold text-gray-800">
+                  <h3 class="print:text-xs font-semibold text-neutral-800">
                     Recipient
                   </h3>
                   <h3
-                    class="print:text-xs text-lg text-gray-600"
+                    class="print:text-xs text-lg text-neutral-600"
                     x-text="client.name"
                   ></h3>
                 </div>
@@ -88,17 +88,53 @@
             <div>
               <div class="flex gap-x-2 items-start">
                 <span
-                  class="flex shrink-0 justify-center items-center size-7 bg-white border border-gray-200 text-[10px] font-light text-lg uppercase text-gray-600 rounded-lg"
+                  class="flex shrink-0 justify-center items-center size-7 bg-white border border-neutral-200 text-[10px] font-light text-lg uppercase text-neutral-600 rounded-lg"
                 >
                   <i class="ri-map-pin-line"></i>
                 </span>
                 <div>
-                  <h3 class="print:text-xs font-semibold text-gray-800">
+                  <h3 class="print:text-xs font-semibold text-neutral-800">
                     Address
                   </h3>
                   <address
-                    class="print:text-xs text-lg font-normal not-italic text-gray-600"
+                    class="print:text-xs text-lg font-normal not-italic text-neutral-600"
                     x-text="client.adresse"
+                  ></address>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex gap-x-2 items-start">
+                <span
+                  class="flex shrink-0 justify-center items-center size-7 bg-white border border-neutral-200 text-[10px] font-light text-lg uppercase text-neutral-600 rounded-lg"
+                >
+                  <i class="ri-phone-line"></i>
+                </span>
+                <div>
+                  <h3 class="print:text-xs font-semibold text-neutral-800">
+                    Phone
+                  </h3>
+                  <address
+                    class="print:text-xs text-lg font-normal not-italic text-neutral-600"
+                    x-text="client.phone"
+                  ></address>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex gap-x-2 items-start">
+                <span
+                  class="flex shrink-0 justify-center items-center size-7 bg-white border border-neutral-200 text-[10px] font-light text-lg uppercase text-neutral-600 rounded-lg"
+                >
+                  <i class="ri-mail-line"></i>
+                </span>
+                <div>
+                  <h3 class="print:text-xs font-semibold text-neutral-800">
+                    Email
+                  </h3>
+                  <address
+                    class="print:text-xs text-lg font-normal not-italic text-neutral-600"
+                    x-text="client.email"
                   ></address>
                 </div>
               </div>
@@ -121,11 +157,11 @@
               </div>
               <div class="ms-3">
                 <h3
-                  class="print:text-xs text-gray-800 font-semibold"
+                  class="print:text-xs text-neutral-800 font-semibold"
                   x-text="info_banner.title"
                 ></h3>
                 <p
-                  class="print:text-xs text-sm text-gray-700"
+                  class="print:text-xs text-sm text-neutral-700"
                   x-text="info_banner.message"
                 ></p>
               </div>
@@ -139,24 +175,24 @@
               <div class="flex gap-2">
                 <i class="ri-bank-fill"></i>
                 <h3
-                  class="print:text-sm text-gray-800 font-semibold"
+                  class="print:text-sm text-neutral-800 font-semibold"
                   x-text="payment.Bank"
                 ></h3>
               </div>
               <div class="grid grid-cols-2 font-light">
-                <p class="print:text-xs text-sm text-gray-700">
+                <p class="print:text-xs text-sm text-neutral-700">
                   <span class="font-normal">Holder :</span>
                   <span x-text="payment.holder"></span>
                 </p>
-                <p class="print:text-xs text-sm text-gray-700">
+                <p class="print:text-xs text-sm text-neutral-700">
                   <span class="font-normal">Code_SWIFT :</span>
                   <span x-text="payment.Code_SWIFT"></span>
                 </p>
-                <p class="print:text-xs text-sm text-gray-700">
+                <p class="print:text-xs text-sm text-neutral-700">
                   <span class="font-normal">RIB :</span>
                   <span x-text="payment.RIB"></span>
                 </p>
-                <p class="print:text-xs text-sm text-gray-700">
+                <p class="print:text-xs text-sm text-neutral-700">
                   <span class="font-normal">IBAN :</span>
                   <span x-text="payment.IBAN"></span>
                 </p>
@@ -166,27 +202,27 @@
           <!-- Table -->
           <div class="mt-6">
             <div
-              class="print:p-2 border border-b-0 border-gray-200 p-4 rounded-t-lg"
+              class="print:p-2 border border-b-0 border-neutral-200 p-4 rounded-t-lg"
             >
               <h1
                 class="print:text-sm text-center font-semibold"
                 x-text="title"
               ></h1>
             </div>
-            <div class="border border-gray-200 p-4 rounded-b-lg space-y-4">
+            <div class="border border-neutral-200 p-4 rounded-b-lg space-y-4">
               <div>
                 <template x-for="(item, index) in items" :key="index + 1">
                   <div>
                     <div class="flex gap-x-3">
                       <!-- Icon -->
                       <div
-                        class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200"
+                        class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-neutral-200"
                       >
                         <div
                           class="relative z-10 size-7 flex justify-center items-center"
                         >
                           <span
-                            class="flex shrink-0 justify-center items-center size-7 bg-white border border-gray-200 text-[10px] font-semibold uppercase text-gray-600 rounded-full"
+                            class="flex shrink-0 justify-center items-center size-7 bg-white border border-neutral-200 text-[10px] font-semibold uppercase text-neutral-600 rounded-full"
                           >
                             <i class="ri-stack-line text-lg font-light"></i>
                           </span>
@@ -197,15 +233,15 @@
                       <!-- Right Content -->
                       <div class="print:pb-2 grow pt-0.5 pb-8">
                         <h3
-                          class="print:text-sm flex gap-x-1.5 font-semibold text-gray-800"
+                          class="print:text-sm flex gap-x-1.5 font-semibold text-neutral-800"
                           x-text="item.title"
                         ></h3>
                         <p
-                          class="print:text-xs mt-1 text-sm text-gray-600"
+                          class="print:text-xs mt-1 text-sm text-neutral-600"
                           x-text="item.description"
                         ></p>
                         <ul
-                          class="print:text-xs marker:text-gray-600 list-disc ps-8 pt-2 text-sm text-gray-600"
+                          class="print:text-xs marker:text-neutral-600 list-disc ps-8 pt-2 text-sm text-neutral-600"
                         >
                           <template
                             x-for="option in item.options"
@@ -231,7 +267,7 @@
                       ></span>
                       <span
                         x-show="billing.quantity"
-                        class="print:text-xs text-gray-600 uppercase bg-gray-100 px-2 py-1 rounded-lg"
+                        class="print:text-xs text-neutral-600 uppercase bg-neutral-100 px-2 py-1 rounded-lg"
                         x-text="'QTE :' + item.quantity"
                       ></span>
                     </div>
@@ -250,12 +286,12 @@
                 <!-- Total HT (before tax) -->
                 <dl x-show="billing.HT" class="grid sm:grid-cols-5 gap-x-3">
                   <dt
-                    class="print:text-xs col-span-3 font-semibold text-gray-800"
+                    class="print:text-xs col-span-3 font-semibold text-neutral-800"
                   >
                     Before tax:
                   </dt>
                   <dd
-                    class="print:text-xs col-span-2 text-gray-500"
+                    class="print:text-xs col-span-2 text-neutral-500"
                     x-text="billing.HT.toFixed(2) + ' ' + billing.currency"
                   ></dd>
                 </dl>
@@ -266,12 +302,12 @@
                   class="grid sm:grid-cols-5 gap-x-3"
                 >
                   <dt
-                    class="print:text-xs col-span-3 font-semibold text-gray-800"
+                    class="print:text-xs col-span-3 font-semibold text-neutral-800"
                   >
                     Tax ( <span x-text="billing.TVA"></span>%):
                   </dt>
                   <dd
-                    class="print:text-xs col-span-2 text-gray-500"
+                    class="print:text-xs col-span-2 text-neutral-500"
                     x-text="billing.TVA_amount.toFixed(2) + ' ' + billing.currency"
                   ></dd>
                 </dl>
@@ -279,12 +315,12 @@
                 <!-- Total TTC (All Taxes Included) -->
                 <dl x-show="billing.TTC" class="grid sm:grid-cols-5 gap-x-3">
                   <dt
-                    class="print:text-xs col-span-3 font-semibold text-gray-800"
+                    class="print:text-xs col-span-3 font-semibold text-neutral-800"
                   >
                     All Taxes Included:
                   </dt>
                   <dd
-                    class="print:text-xs col-span-2 text-gray-500"
+                    class="print:text-xs col-span-2 text-neutral-500"
                     x-text="billing.TTC.toFixed(2) + ' ' + billing.currency"
                   ></dd>
                 </dl>
@@ -295,7 +331,7 @@
                   class="grid sm:grid-cols-5 gap-x-3"
                 >
                   <dt
-                    class="print:text-xs col-span-3 font-semibold text-gray-800"
+                    class="print:text-xs col-span-3 font-semibold text-neutral-800"
                   >
                     Discounts:
                   </dt>
@@ -311,7 +347,7 @@
                   class="grid sm:grid-cols-5 gap-x-3"
                 >
                   <dt
-                    class="print:text-xs col-span-3 font-semibold text-gray-800"
+                    class="print:text-xs col-span-3 font-semibold text-neutral-800"
                   >
                     Total Amount :
                   </dt>
@@ -327,7 +363,7 @@
                   class="grid sm:grid-cols-5 gap-x-3"
                 >
                   <dt
-                    class="print:text-xs col-span-3 font-semibold text-gray-800"
+                    class="print:text-xs col-span-3 font-semibold text-neutral-800"
                   >
                     Advance Payment:
                   </dt>
@@ -339,7 +375,7 @@
 
                 <!-- Remaining Amount -->
                 <!-- <dl class="grid sm:grid-cols-5 gap-x-3">
-                                <dt class="print:text-xs col-span-3 font-semibold text-gray-800">Remaining Amount Due:
+                                <dt class="print:text-xs col-span-3 font-semibold text-neutral-800">Remaining Amount Due:
                                 </dt>
                                 <dd class="print:text-xs col-span-2 font-semibold text-green-500"
                                     x-text="(billing.total_price_amount - billing.advance_paiment).toFixed(2) + ' ' + billing.currency">
@@ -354,24 +390,27 @@
 
           <div class="mt-8 sm:mt-12">
             <h4
-              class="print:text-xs text-lg font-semibold text-gray-800"
+              class="print:text-xs text-lg font-semibold text-neutral-800"
               x-text="billing.footer.title"
             ></h4>
             <p
-              class="print:text-xs text-gray-500"
+              class="print:text-xs text-neutral-500"
               x-text="billing.footer.description"
             ></p>
             <div class="mt-2">
               <template x-for="contact in billing.contact">
                 <p
-                  class="print:text-xs block text-sm font-medium text-gray-800"
+                  class="print:text-xs block text-sm font-medium text-neutral-800"
                   x-text="contact"
                 ></p>
               </template>
             </div>
           </div>
 
-          <p class="mt-5 text-sm text-gray-500" x-text="billing.copyright"></p>
+          <p
+            class="mt-5 text-sm text-neutral-500"
+            x-text="billing.copyright"
+          ></p>
         </div>
         <!-- End Card -->
 
@@ -379,11 +418,11 @@
         <div class="print:hidden mt-6 flex justify-end gap-x-3">
           <button
             @click="open = true"
-            class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50"
+            class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-neutral-200 bg-white text-neutral-800 shadow-sm hover:bg-neutral-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-50"
           >
-            <i class="ri-add-line font-normal"></i>
+            <i class="ri-file-text-line font-normal"></i>
 
-            Create new invoice
+            Manage invoice
           </button>
           <button
             onclick="print()"
@@ -426,7 +465,7 @@
           </div>
           <div class="p-4 sm:p-6 overflow-y-auto w-full">
             <!-- form header -->
-            <div class="flex gap-2 pb-2">
+            <div class="flex gap-2">
               <div
                 class="flex-shrink-0 flex justify-center items-center size-11 bg-neutral-100 rounded-lg border border-neutral-200"
               >
@@ -437,7 +476,7 @@
 
               <div class="grow">
                 <div>
-                  <h3 class="text-lg font-bold text-gray-800">
+                  <h3 class="text-lg font-bold text-neutral-800">
                     Edit Invoice Data
                   </h3>
                   <p class="text-sm -mt-1 text-neutral-600">
@@ -448,7 +487,7 @@
             </div>
             <!-- Stepper -->
             <ul
-              class="relative flex flex-row gap-x-2 children:flex-1"
+              class="py-3 relative flex flex-row gap-x-2 children:flex-1"
               x-data="itemsData()"
             >
               <template x-for="(item, index) in steps" :key="index">
@@ -456,7 +495,7 @@
                   class="flex items-center gap-x-2 shrink basis-0 group flex-1 last:flex-none cursor-pointer"
                   :class="{
         'font-semibold text-blue-600': step === index + 1,
-        'text-gray-800': step !== index + 1
+        'text-neutral-800': step !== index + 1
       }"
                   @click="setStep(index)"
                 >
@@ -464,93 +503,220 @@
                     class="min-w-7 min-h-7 inline-flex justify-center items-center text-xs align-middle"
                   >
                     <span
-                      class="size-7 flex justify-center items-center shrink-0 border border-gray-200 font-medium rounded-full"
+                      class="size-8 flex justify-center items-center shrink-0 border border-neutral-200 font-medium rounded-full"
                       :class="{
         'border-blue-600 text-blue-600': step === index + 1,
-        'text-white bg-blue-600': step > index + 1,
-        'border-gray-200 text-gray-800': step !== index + 1
+        'text-white bg-neutral-600': step > index + 1,
+        'border-neutral-200 text-neutral-800': step !== index + 1
       }"
-                      x-text="index + 1"
-                    ></span>
+                    >
+                      <i :class="item.icon" class="font-normal text-lg"></i>
+                    </span>
                     <span
                       class="ms-2 block text-sm font-medium"
                       x-text="item.title"
                     ></span>
                   </div>
                   <div
-                    class="w-full h-px flex-1 group-last:hidden"
-                    :class="step > index + 1 ? 'bg-blue-600' : 'bg-gray-200'"
+                    class="w-full h-px flex-1 bg-neutral-200 group-last:hidden"
+                    :class="step > index + 1 ? 'font-bold' : 'font-normal'"
                   ></div>
                 </li>
               </template>
             </ul>
             <!-- End Stepper -->
-            <!-- Client Info -->
-            <div class="mb-4">
-              <label class="block font-semibold">Client Name</label>
-              <input x-model="client.name" class="border px-3 py-2 w-full" />
+            <div class="border bg-neutral-50 border-neutral-200 p-4 rounded-lg">
+              <!-- Basic Info -->
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label>Company</label>
+                  <input
+                    x-model="billing.company"
+                    class="border rounded-lg px-3 py-2 w-full"
+                  />
+                </div>
+                <div>
+                  <label>ICE</label>
+                  <input
+                    x-model="billing.ice"
+                    class="border rounded-lg px-3 py-2 w-full"
+                  />
+                </div>
+                <div>
+                  <label>Matricule</label>
+                  <input
+                    x-model="billing.matricule"
+                    class="border rounded-lg px-3 py-2 w-full"
+                  />
+                </div>
+                <div>
+                  <label>Location</label>
+                  <input
+                    x-model="billing.location"
+                    class="border rounded-lg px-3 py-2 w-full"
+                  />
+                </div>
+                <!-- Logo Upload -->
+                <div class="mb-4">
+                  <label class="block font-semibold">Logo</label>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    @change="handleImageUpload($event, 'logo')"
+                    class="border rounded-lg px-3 py-2 w-full"
+                  />
+                  <template x-if="billing.logo">
+                    <img :src="billing.logo" class="mt-2 h-20 object-contain" />
+                  </template>
+                </div>
+
+                <!-- Signature Upload -->
+                <div class="mb-4">
+                  <label class="block font-semibold">Signature</label>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    @change="handleImageUpload($event, 'signature')"
+                    class="border rounded-lg px-3 py-2 w-full"
+                  />
+                  <template x-if="billing.signature">
+                    <img
+                      :src="billing.signature"
+                      class="mt-2 h-20 object-contain"
+                    />
+                  </template>
+                </div>
+              </div>
+
+              <!-- Footer Info -->
+              <div class="mt-4">
+                <label>Footer Title</label>
+                <input
+                  x-model="billing.footer.title"
+                  class="border rounded-lg px-3 py-2 w-full"
+                />
+                <label class="mt-2 block">Footer Description</label>
+                <textarea
+                  x-model="billing.footer.description"
+                  class="border rounded-lg px-3 py-2 w-full"
+                ></textarea>
+              </div>
+
+              <!-- Billing Numbers -->
+              <div class="grid grid-cols-2 gap-4 mt-4">
+                <div>
+                  <label>Advance Payment</label>
+                  <input
+                    type="number"
+                    x-model="billing.advance_paiment"
+                    class="border rounded-lg px-3 py-2 w-full"
+                  />
+                </div>
+                <div>
+                  <label>Reduce Price</label>
+                  <input
+                    type="number"
+                    x-model="billing.reduce_price"
+                    class="border rounded-lg px-3 py-2 w-full"
+                  />
+                </div>
+                <div>
+                  <label>TVA (%)</label>
+                  <input
+                    type="number"
+                    x-model="billing.TVA"
+                    class="border rounded-lg px-3 py-2 w-full"
+                  />
+                </div>
+                <div>
+                  <label>Currency</label>
+                  <input
+                    x-model="billing.currency"
+                    class="border rounded-lg px-3 py-2 w-full"
+                  />
+                </div>
+              </div>
+
+              <!-- Dates -->
+              <div class="grid grid-cols-2 gap-4 mt-4">
+                <div>
+                  <label>Date</label>
+                  <input
+                    type="date"
+                    x-model="billing.date"
+                    class="border rounded-lg px-3 py-2 w-full"
+                  />
+                </div>
+                <div>
+                  <label>Payment Date</label>
+                  <input
+                    type="date"
+                    x-model="billing.payment_date"
+                    class="border rounded-lg px-3 py-2 w-full"
+                  />
+                </div>
+              </div>
+
+              <!-- copyright -->
+              <div class="mt-4">
+                <label>Copyright message</label>
+                <input
+                  x-model="billing.copyright"
+                  class="border rounded-lg px-3 py-2 w-full"
+                />
+              </div>
+
+              <!-- Booleans -->
+              <div class="flex gap-4 mt-4">
+                <label
+                  ><input type="checkbox" x-model="billing.pricing" /> Enable
+                  Pricing</label
+                >
+                <label
+                  ><input type="checkbox" x-model="billing.quantity" /> Enable
+                  Quantity</label
+                >
+              </div>
+
+              <!-- Contact CRUD -->
+              <div class="mt-4">
+                <label class="font-semibold block mb-2">Contacts</label>
+
+                <template
+                  x-for="(number, index) in billing.contact"
+                  :key="index"
+                >
+                  <div class="flex items-center gap-2 mb-2">
+                    <input
+                      x-model="billing.contact[index]"
+                      class="border rounded-lg px-3 py-2 w-full"
+                    />
+                    <button
+                      @click="removeContact(index)"
+                      type="button"
+                      class="py-1 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-red-600 text-white hover:bg-red-700 focus:outline-none focus:bg-red-700 disabled:opacity-50 disabled:pointer-events-none"
+                    >
+                      <i class="ri-delete-bin-line text-lg"></i>
+                    </button>
+                  </div>
+                </template>
+
+                <div class="flex gap-2 mt-2">
+                  <input
+                    x-model="newContact"
+                    placeholder="Add new contact"
+                    class="border rounded-lg px-3 py-2 w-full"
+                  />
+                  <button
+                    @click="addContact"
+                    type="button"
+                    class="py-1 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                  >
+                    <i class="ri-add-circle-line text-lg"></i>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="mb-4">
-              <label class="block font-semibold">Client Address</label>
-              <input x-model="client.adresse" class="border px-3 py-2 w-full" />
-            </div>
-
-            <!-- Billing -->
-            <div class="grid grid-cols-2 gap-4">
-              <div>
-                <label class="block font-semibold">Matricule</label>
-                <input
-                  x-model="billing.matricule"
-                  class="border px-3 py-2 w-full"
-                />
-              </div>
-              <div>
-                <label class="block font-semibold">Advance Payment</label>
-                <input
-                  type="number"
-                  x-model="billing.advance_paiment"
-                  class="border px-3 py-2 w-full"
-                />
-              </div>
-              <div>
-                <label class="block font-semibold">Reduce Price</label>
-                <input
-                  type="number"
-                  x-model="billing.reduce_price"
-                  class="border px-3 py-2 w-full"
-                />
-              </div>
-              <div>
-                <label class="block font-semibold">TVA (%)</label>
-                <input
-                  type="number"
-                  x-model="billing.TVA"
-                  class="border px-3 py-2 w-full"
-                />
-              </div>
-            </div>
-
-            <!-- Item editing (optional: loop) -->
-            <template x-for="(item, index) in items" :key="index">
-              <div class="mt-4 border-t pt-4">
-                <label class="block font-semibold">Item Title</label>
-                <input x-model="item.title" class="border px-3 py-2 w-full" />
-
-                <label class="block font-semibold mt-2">Price</label>
-                <input
-                  type="number"
-                  x-model="item.price"
-                  class="border px-3 py-2 w-full"
-                />
-
-                <label class="block font-semibold mt-2">Quantity</label>
-                <input
-                  type="number"
-                  x-model="item.quantity"
-                  class="border px-3 py-2 w-full"
-                />
-              </div>
-            </template>
           </div>
           <!-- form footer -->
           <div
@@ -559,7 +725,7 @@
             <button
               @click="open = false"
               type="button"
-              class="flex justify-center gap-x-2 items-center py-2 px-3 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+              class="flex justify-center gap-x-2 items-center py-2 px-3 text-sm font-medium rounded-lg border border-neutral-200 bg-white text-neutral-800 shadow-2xs hover:bg-neutral-50 focus:outline-hidden focus:bg-neutral-50 disabled:opacity-50 disabled:pointer-events-none"
             >
               <i class="ri-close-line"></i>
               Cancel

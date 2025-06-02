@@ -15,7 +15,7 @@ document.addEventListener("alpine:init", () => {
       {
         title: "Items",
         description: "Add items to the invoice.",
-        icon: "ri-list-check-2-line",
+        icon: "ri-stack-line",
       },
       {
         title: "Payment",
@@ -23,9 +23,9 @@ document.addEventListener("alpine:init", () => {
         icon: "ri-bank-card-line",
       },
       {
-        title: "Review",
-        description: "Review your invoice before sending.",
-        icon: "ri-file-list-3-line",
+        title: "Notes",
+        description: "Add any additional notes or instructions.",
+        icon: "ri-information-2-line",
       },
     ],
     open: false,
@@ -39,10 +39,14 @@ document.addEventListener("alpine:init", () => {
     billing: {
       pricing: false,
       quantity: false,
-      date: new Date().toLocaleDateString(),
+      date: null,
+      payment_date: null,
+      company: "KUDINO",
+      ice: "36834503",
       matricule: "KUDINO36834503",
       location: "Agadir, Morocco",
       logo: "./assets/images/kudino-white-bg.svg",
+      signature: "./assets/images/kudino-white-bg.svg",
       footer: {
         title: "Thank you!",
         description:
@@ -62,6 +66,8 @@ document.addEventListener("alpine:init", () => {
     client: {
       name: "MR Ibraheem Alhudaithi",
       adresse: "Riyadh , Saudi Arabia",
+      email: "email@gmail.com",
+      phone: "966 55 555 5555",
     },
     items: [
       {
@@ -143,6 +149,26 @@ document.addEventListener("alpine:init", () => {
     },
     setStep(index) {
       this.step = index + 1;
+    },
+    newContact: "",
+    addContact() {
+      if (this.newContact.trim() !== "") {
+        this.billing.contact.push(this.newContact.trim());
+        this.newContact = "";
+      }
+    },
+    removeContact(index) {
+      this.billing.contact.splice(index, 1);
+    },
+    handleImageUpload(event, target) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          this.billing[target] = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
     },
     init() {
       this.calculateTotals();
