@@ -29,8 +29,7 @@ document.addEventListener("alpine:init", () => {
       },
     ],
     open: false,
-    title:
-      "Create ROBOTICA subscription using LARAVEL, VUE JS, and TAILWIND CSS with ODOO",
+    title: "",
     info_banner: {
       color: "purple",
       title: "",
@@ -41,20 +40,22 @@ document.addEventListener("alpine:init", () => {
       quantity: false,
       date: null,
       payment_date: null,
-      company: "KUDINO",
-      ice: "36834503",
-      matricule: "KUDINO36834503",
+      company: "",
+      ice: "",
+      matricule: "",
       location: "Agadir, Morocco",
-      logo: "./assets/images/kudino-white-bg.svg",
-      signature: "./assets/images/kudino-white-bg.svg",
+      // add image url
+      logo: "",
+      // add image url
+      signature: "",
       footer: {
-        title: "Thank you!",
-        description:
-          "If you have any questions concerning this document, use the following contact information:",
+        title: "",
+        description: "",
       },
-      contact: ["06 16 88 31 78", "06 36 61 42 16"],
-      copyright: "© 2024 KUDINO",
-      reduce_price: 0,
+      // you can add multiple contact inside this array
+      contact: ["", ""],
+      copyright: "",
+      reduce_price: 0, // discount
       advance_paiment: 200,
       HT: 0, // Total before tax
       TVA: 0, // Tax rate (20%)
@@ -64,56 +65,28 @@ document.addEventListener("alpine:init", () => {
       currency: "$",
     },
     client: {
-      name: "MR Ibraheem Alhudaithi",
-      adresse: "Riyadh , Saudi Arabia",
-      email: "email@gmail.com",
-      phone: "966 55 555 5555",
+      name: "",
+      adresse: "",
+      email: "",
+      phone: "",
     },
+    // list your product
     items: [
       {
-        title: "Users and clients management with odoo",
-        description:
-          "Manage all your users and clients permissions and authentication.",
-        options: [
-          "Login and authentication management",
-          "Register new users and clients",
-          "Manage all users and clients data",
-          "Securing the authentication",
-        ],
+        title: "",
+        description: "",
+        //you can add multiple options
+        options: [""],
         price: 400,
-        quantity: 1,
-      },
-      {
-        title: "Subscription management using odoo",
-        description: "Recurring billing & subscriber management the easy way.",
-        options: [
-          "Get the list of subscriptions for your application",
-          "Store and manage all clients billing information",
-          "Generate reports and statistics information",
-          "Testing",
-        ],
-        price: 400,
-        quantity: 1,
-      },
-      {
-        title: "Purchase management using odoo",
-        description:
-          "Create your addons product with variants and manage the orders and payments.",
-        options: [
-          "Product or services management",
-          "Order management",
-          "Payments management",
-        ],
-        price: 90,
         quantity: 1,
       },
     ],
     payment: {
-      holder: "AYOUB LAAOUAOUCHA",
-      RIB: "230 022 2909683211031600 69",
-      IBAN: "MA64 2300 2229 0968 3211 0316 0069",
-      Code_SWIFT: "CIHMMAMC",
-      Bank: "CIH bank",
+      holder: "",
+      RIB: "",
+      IBAN: "",
+      Code_SWIFT: "",
+      Bank: "",
     },
 
     calculateTotals() {
